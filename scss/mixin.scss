@@ -1,0 +1,36 @@
+@mixin aboutMySelf {
+    @media screen and (max-width:1200px) {
+        margin-left: 0;
+    }
+}
+@mixin line{
+    @media screen and(max-width:1000px) {
+        left: 84%;
+    }
+}
+@mixin slider{
+    @media screen and(max-width:1300px) {
+        flex-direction: column;
+        & img{
+            width: 100%;
+            border-radius: 0px;
+            // height: 100%;
+        }
+    }
+}
+@mixin text{
+    @media screen and(max-width:1300px) {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+@mixin contact{
+    @media screen and(max-width:500px) {
+        flex-direction: column;
+    }
+}
+@mixin nav{
+    @media screen and(max-width: 650px) {
+        margin: 20px 10px;
+    }
+}

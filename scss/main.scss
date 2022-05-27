@@ -1,0 +1,291 @@
+@import 'normalize';
+@import 'mixin';
+// убрать scrollbar
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; 
+}
+/* ie 10+ */
+// body { -ms-overflow-style: none; }
+/* фф (свойство больше не работает, других способов тоже нет)*/
+// body { overflow: -moz-scrollbars-none; }
+h2{
+    color: #006E7F;
+    text-align: center;
+}
+h3{
+    color: #006E7F;
+}
+h4{
+    color: #ffffff;
+    padding-top: 100px;
+    font-size: 50px;
+}
+h5{
+    font-size: 30px;
+    padding: 30px 0 20px 0;
+}
+h6{
+    color: #006E7F;
+    font-size: 35px;
+    padding: 20px 0;
+}
+button{
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+}
+a:hover{
+    color: #006E7F;
+}
+.invisible{
+    display: none;
+}
+.icons-info{
+    margin-top: 10px;
+}
+#particles-js{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+.block{
+    padding: 0 10%;
+}
+.header{
+    position: relative;
+    height: 100vh;
+    background-color: grey;
+    &__nav{
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%);
+        & li{
+            margin: 20px 50px;
+            @include nav();
+        }
+    }
+    &__info{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        & img{
+            width: 150px;
+            height: 150px;
+            border-radius: 250px;
+        }
+    }
+}
+.aboutMySelf{
+    margin-top: 100px;
+    &__info{
+        display: flex;
+        flex-direction: column;
+        padding-top: 120px;
+        &-block{
+            width: 400px;
+            padding-bottom: 120px;
+            & p{
+                width: 80%;
+            }
+        }
+        & div:nth-child(2n+2){
+            margin-left: auto;
+            @include aboutMySelf();
+        }
+        & div:nth-child(2n+1){
+            margin-left: 120px;
+            @include aboutMySelf();
+           margin-right: auto;
+        }
+    }
+    &__line{
+        position: absolute;
+        left: 50%;
+        top: 122%;
+        height: 850px;
+        width: 5px;
+        border-radius: 10px;
+        background-color: #006E7F;
+        @include line();
+        &-icon{
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            padding-top: 30px;
+            height: 750px;
+            & img{
+                height: 50px;
+                width: 50px;
+                margin-left: -27px;
+                flex: 0 1 100%;
+                background-color: #006E7F;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            // & img:nth-child(2n+1){
+            //    height: 50px;
+            //    width: 50px;
+            // //    margin-left: -60px;  
+            // }
+            // & img:nth-child(2n){
+            //     height: 50px;
+            //     width: 50px;
+            //     // margin-left: 20px;  
+            // }
+        }
+    }
+}
+.portfolio{
+    margin-top: 150px;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    background-color: #1b1b1b;
+    @include slider();
+    & p{
+        color: white;
+    }
+    &__me{
+        & ul li{
+            padding-bottom: 15px;
+            & a{
+                color: #006E7F;
+            }
+        }
+    }
+    &__siteMap{
+        & li{
+            margin-bottom: 10px;
+        }
+    }
+    &__social{
+        text-align: left;
+        &-list{
+            display: flex;
+            & div{
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.footer{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #121212;
+}
+.notReady{
+    display: none;
+    background-color: #000000b4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    &__block{
+        position: fixed;
+        left: 50%;
+        margin-left: -200px;
+        top: 40%;
+        z-index: 2;
+        background-color: rgb(250, 250, 250);
+        border-radius: 10px;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        & button{
+            background-color: #006E7F;
+        }
+    }
+}
+// СЛАЙДЕР Портфоли
+.fusion{
+    background-color: #2e2c2c;
+    & button{
+        background-color: #f7ac53;;
+    }
+}
+.nomi-komi{
+    background-color: #900C3F;
+    & button{
+        background-color: #FF5733;
+    }
+}
+.aries{
+    background-color: #292426;
+    & button{
+        background-color: #970211;
+    }
+}
+.slick-slider{
+    height: 100%;
+    width: 100%;
+
+}
+.slider{
+    margin-top: 100px;
+    &__item{
+        width: 100%;
+        background-color: #d68725;
+        display: flex;
+        height: 70vh;
+        border-radius: 20px;
+        @include slider();
+        &-text{
+            border-radius: 10px 0 0 10px;
+            width: 40%;
+            padding-left: 20px;
+            color: white;
+            @include text();
+            & p{
+                padding: 50px 0;
+            }
+            & a{
+                text-transform: uppercase;
+                transition: 0.5s;
+                &:hover{
+                    font-size: 18px;
+                    transition: 0.5s;
+                    color: #006E7F;
+                }
+            }
+        }
+        &-img{
+            height: 100%;
+            width: 70%;
+            border-radius: 0px 20px 20px 0;
+        }
+    }
+}
+.slick-list{
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.slick-dots button{
+    font-size: 0;
+    background-color: grey;
+    opacity: 0.5;
+    margin: 5px;
+}
+.slick-active button{
+    opacity: 1;
+    background-color: #006E7F;
+}
