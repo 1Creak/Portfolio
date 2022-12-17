@@ -291,6 +291,7 @@ body::-webkit-scrollbar {
 h2 {
   color: #006E7F;
   text-align: center;
+  font-size: 32px;
 }
 
 h3 {
