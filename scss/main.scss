@@ -1,13 +1,12 @@
 @import 'normalize';
 @import 'mixin';
-// убрать scrollbar
-/* хром, сафари */
-body::-webkit-scrollbar { width: 0; 
+
+html{
+    scroll-behavior: smooth;
 }
-/* ie 10+ */
-// body { -ms-overflow-style: none; }
-/* фф (свойство больше не работает, других способов тоже нет)*/
-// body { overflow: -moz-scrollbars-none; }
+body::-webkit-scrollbar { 
+    width: 0; 
+}
 h2{
     color: #006E7F;
     text-align: center;

@@ -1,6 +1,6 @@
+<!-- #region head -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,11 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/943/943329.png">
     <title>Portfolio</title>
 </head>
-
+<!-- #endregion -->
 <body>
     <header class="header" id="particles-js">
         <ul class="header__nav" id="home">
-            <li><a href="#">Головна</a></li>
+            <li><a href="#home">Головна</a></li>
             <li><a href="#about">Про себе</a></li>
             <li><a href="#portfolio">Портфоліо</a></li>
             <li><a href="#contact">Контакти</a></li>
@@ -26,18 +26,9 @@
             <h1>Junior Front-end Developer</h1>
             <p>Скрипник Євгеній</p>
         </div>
-
-        <!-- <div class="slider__dark"></div>
-        <div class="slider">
-            <div class="slider__item">
-                <img src="./img/bg.jpg" alt="slider">
-            </div>
-            <div class="slider__item">
-                <img src="./img/bg.jpg" alt="slider">
-            </div>
-        </div> -->
     </header>
-    <section class="aboutMySelf block" id="about">
+    <main>
+        <section class="aboutMySelf block" id="about">
         <h2>Про себе</h2>
         <div class="aboutMySelf__line">
             <div class="aboutMySelf__line-icon">
@@ -65,14 +56,14 @@
                 <p>Дуже товариська людина, і шукаю собі команду, з якою можна не тільки працювати, а й дружити, спілкуватися добре проводити час. Не можу працювати в колективі, де є токсичність або якийсь негатив.</p>
             </div>
         </div>
-    </section>
-    <section class="portfolio block" id="portfolio">
+        </section>
+        <section class="portfolio block" id="portfolio">
         <h2>Портфоліо</h2> 
         <div class="slider">
             <div class="slider__item">
                 <div class="slider__item-text fusion">
                     <h4>Fusion</h4>
-                    <p>Моя остання робота</p>
+                    <p>Лендінг</p>
                     <a href="https://1creak.github.io/Fusion/">Перейти за посиланням</a>
                 </div>
                 <img src="./img/333.jpg" alt="previe" class="slider__item-img">
@@ -110,8 +101,8 @@
                 <img src="./img/slider-work2.png" alt="previe" class="slider__item-img">
             </div>
         </div>
-    </section>
-    <section class="contact block" id="contact">
+        </section>
+        <section class="contact block" id="contact">
         <div class="contact__me">
             <h5>Мої контакти</h5>
             <ul>
@@ -143,17 +134,19 @@
                 <p class="invisible icons-info" id="email-name"><a href="email:zsokol20@gmail.com">zsokol20@gmail.com</a> </p>
             </div>
         </div>
-    </section>
-    <section class="notReady" id="websiteNotReady">
+        </section>
+        <section class="notReady" id="websiteNotReady">
         <div class="notReady__block">
             <h6>Знаходиться на періоді розробки</h6>
             <button id="close">ok</button>
         </div>
-    </section>
+        </section>
+    </main>
+    
     <footer class="footer block">
         <p>@2022-2022 Skrypnyk Evhenii</p>
     </footer>
-    <!-- script -->
+    <!-- #region script -->
     <script src="./js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -163,6 +156,7 @@
     <script src="./js/particles.js"></script>
     <script src="./js/bg.js"></script>
     <script src="./js/app.js"></script>
+    <!-- #endregion -->
 </body>
 
 </html>

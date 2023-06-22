@@ -1,4 +1,3 @@
-@charset "UTF-8";
 article,
 aside,
 details,
@@ -281,13 +280,14 @@ ul {
           padding-inline-start: 0px;
 }
 
-/* хром, сафари */
+html {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   width: 0;
 }
 
-/* ie 10+ */
-/* фф (свойство больше не работает, других способов тоже нет)*/
 h2 {
   color: #006E7F;
   text-align: center;
